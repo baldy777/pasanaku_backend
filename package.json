@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/baldy777/pasanakubackend#readme",
   "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/morgan": "^1.9.10",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   },
