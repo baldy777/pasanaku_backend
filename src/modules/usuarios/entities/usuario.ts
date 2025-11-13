@@ -20,19 +20,22 @@ export class Usuario {
   username!: string;
 
   @Column({ type: "varchar", length: 100, unique: true })
-  email!: string;
+  correo!: string;
 
   @Column({ type: "varchar", length: 255 })
-  password!: string;
-
-  @Column({ type: "boolean", default: true })
-  activo!: boolean;
+  clave!: string;
 
   @CreateDateColumn()
-  created_at!: Date;
+  usuario_creacion!: string;
+
+  @CreateDateColumn()
+  fecha_creacion!: Date;
 
   @UpdateDateColumn()
-  updated_at!: Date;
+  usuario_modificacion!: string;
+
+  @UpdateDateColumn()
+  fecha_modificacion!: Date;
 
   @Column({ type: "int", unique: true })
   persona_id!: number;
