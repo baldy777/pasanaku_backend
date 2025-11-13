@@ -20,9 +20,6 @@ export class UsuarioRol {
   @Column({ type: "int" })
   rol_id!: number;
 
-  @CreateDateColumn()
-  created_at!: Date;
-
   @ManyToOne(() => Usuario, (usuario) => usuario.usuarioRoles, {
     onDelete: "CASCADE",
   })
