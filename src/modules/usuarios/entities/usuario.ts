@@ -37,6 +37,9 @@ export class Usuario {
   @UpdateDateColumn()
   fecha_modificacion!: Date;
 
+  @Column({ type: "varchar", length: 20, nullable: true })
+  estado!: string;
+
   @Column({ type: "int", unique: true })
   persona_id!: number;
 
