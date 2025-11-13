@@ -40,7 +40,7 @@ export class Persona {
   @UpdateDateColumn()
   usuario_modificacion!: string;
 
-  @CreateDateColumn()
+  @UpdateDateColumn()
   fecha_modificacion!: Date;
 
   @Column({ type: "varchar", length: 20, nullable: true })
