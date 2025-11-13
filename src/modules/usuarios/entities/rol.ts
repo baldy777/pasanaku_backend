@@ -23,10 +23,16 @@ export class Rol {
   activo!: boolean;
 
   @CreateDateColumn()
-  created_at!: Date;
+  usuario_creacion!: string;
+
+  @CreateDateColumn()
+  fecha_creacion!: Date;
 
   @UpdateDateColumn()
-  updated_at!: Date;
+  usuario_modificacion!: string;
+
+  @UpdateDateColumn()
+  fecha_modificacion!: Date;
 
   @OneToMany(() => UsuarioRol, (usuarioRol) => usuarioRol.rol)
   usuarioRoles!: UsuarioRol[];
