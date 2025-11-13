@@ -28,17 +28,23 @@ export class Persona {
   @Column({ type: "varchar", length: 15, nullable: true })
   telefono!: string;
 
-  @Column({ type: "varchar", length: 200, nullable: true })
-  direccion!: string;
-
-  @Column({ type: "date", nullable: true })
+  @Column({ type: "date", nullable: true, unique: true })
   fecha_nacimiento!: Date;
 
   @CreateDateColumn()
-  created_at!: Date;
+  usuario_creacion!: string;
+
+  @CreateDateColumn()
+  fecha_creacion!: Date;
 
   @UpdateDateColumn()
-  updated_at!: Date;
+  usuario_modificacion!: string;
+
+  @CreateDateColumn()
+  fecha_modificacion!: Date;
+
+  @Column({ type: "varchar", length: 20, nullable: true })
+  estado!: string;
 
   @OneToOne(() => Usuario, (usuario) => usuario.persona)
   usuario!: Usuario;
